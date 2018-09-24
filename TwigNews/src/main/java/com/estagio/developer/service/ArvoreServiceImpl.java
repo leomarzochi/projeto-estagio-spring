@@ -24,7 +24,7 @@ public class ArvoreServiceImpl implements ArvoreService {
     }
 
     @Override
-    public Arvore findOne(int id) {
+    public Arvore getOne(int id) {
         return repo.findOne(id);
     }
 
@@ -45,7 +45,7 @@ public class ArvoreServiceImpl implements ArvoreService {
 	}
 
 	@Override
-	public Arvore getOne(int id) {
+	public Arvore findOne(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -36,16 +36,16 @@
             <table class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                    <th>Id</th>
+                    
                     <th>Localização</th>
-                    <th>Espécie]</th>
+                    <th>Espécie</th>
                     <th>Editar</th>
                     <th>Apagar</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="tree,iterStat : ${arvores}">
-                    <td th:text="${iterStat.count}"></td>
+                <tr th:each="tree: ${arvores}">
+                   
                     <td th:text="${tree.localizacao}"></td>
                     <td th:text="${tree.especie}"></td>
                     <td><a th:href="@{/arvore/{id}/edit(id=${tree.id})}"><span

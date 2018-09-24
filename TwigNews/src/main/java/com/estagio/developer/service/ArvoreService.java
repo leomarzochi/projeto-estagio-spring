@@ -16,6 +16,4 @@ public interface ArvoreService {
     void delete(int id);
 
 	
-
-	
 }

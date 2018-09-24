@@ -34,7 +34,7 @@ public class ArvoreController {
 
     @GetMapping("/arvore/{id}/edit")
     public String edit(@PathVariable int id, Model model) {
-        model.addAttribute("arvore", arvoreService.findOne(id));
+        model.addAttribute("arvores", arvoreService.findOne(id));
         return "form";
     }
 

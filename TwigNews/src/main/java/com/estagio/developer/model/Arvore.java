@@ -10,7 +10,9 @@ import javax.persistence.Id;
 @Entity
 public class Arvore implements Serializable {
 
-		private static final long serialVersionUID = 1L;
+	
+
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -20,15 +22,21 @@ public class Arvore implements Serializable {
 	
 	private String especie;
 	
+	private int altura;
+	
+	private int diametro;
+	
 	public Arvore() {
 		super();
 	}
 	
-	public Arvore(int id, String localizacao, String especie) {
+	public Arvore(int id, String localizacao, String especie, int altura, int diametro) {
         super();
         this.id = id;
         this.localizacao = localizacao;
         this.especie = especie;
+        this.altura = altura;
+        this.diametro = diametro;
     }
 	
 	public int getId() {
@@ -53,5 +61,20 @@ public class Arvore implements Serializable {
 
 	public void setEspecie(String especie) {
 		this.especie = especie;
+	}
+	public Integer getAltura() {
+		return altura;
+	}
+
+	public void setAltura(Integer altura) {
+		this.altura = altura;
+	}
+
+	public Integer getDiametro() {
+		return diametro;
+	}
+
+	public void setDiametro(Integer diametro) {
+		this.diametro = diametro;
 	}
 }
